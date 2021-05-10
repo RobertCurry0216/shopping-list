@@ -1,5 +1,33 @@
 .navbar {
+  --min-nav-height: 60px;
+
   width: 100%;
-  min-height: 60px;
-  background-color: var(--primary);
+  background-color: var(--secondary-500);
+}
+
+.navbar__container {
+  min-height: var(--min-nav-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__title {
+}
+
+.navbar__items {
+  display: flex;
+  gap: 1rem;
+  font-weight: bold;
+}
+
+.navbar__items a,
+.navbar__items a:visited,
+.navbar__items a:active {
+  color: var(--grey-700);
+  text-decoration: none;
+}
+
+.navbar__items a:hover {
+  color: var(--primary-700);
 }
