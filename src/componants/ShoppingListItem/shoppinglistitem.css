@@ -97,7 +97,7 @@
 .sl-item::after {
   content: "";
   position: absolute;
-  width: 0%;
+  width: 0;
   height: 2px;
   background-color: var(--grey-700);
   top: 50%;
@@ -107,7 +107,7 @@
 }
 
 .sl-item.bought::after {
-  width: 80%;
+  width: 70%;
 }
 
 .sl-item.bought .sl-item__title,
@@ -123,5 +123,9 @@
 @media screen and (min-width: 768px) {
   .sl-item {
     grid-template-columns: 10% auto 10%;
+  }
+
+  .sl-item.bought::after {
+    width: 80%;
   }
 }
