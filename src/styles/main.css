@@ -109,3 +109,21 @@ h6 {
   position: absolute;
   width: 1px;
 }
+
+/* animations */
+
+@keyframes draw-outline {
+  0% {
+    stroke-dashoffset: var(--dash);
+    fill-opacity: 0%;
+  }
+
+  50% {
+    stroke-dashoffset: 0px;
+  }
+
+  100% {
+    stroke-dashoffset: 0px;
+    fill-opacity: 100%;
+  }
+}

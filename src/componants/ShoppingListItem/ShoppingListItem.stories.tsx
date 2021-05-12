@@ -20,8 +20,7 @@ Primary.args = {
 
 export const Bought = Template.bind({});
 Bought.args = {
-  title: "milk",
+  title: "bread",
   quantity: 2,
-  unit: "ml",
   isBought: true,
 };

@@ -46,7 +46,7 @@
   --border-col: var(--primary-400);
   --bg: var(--primary-100);
 
-  margin: 0;
+  margin: auto;
   width: var(--size);
   height: var(--size);
   position: relative;
@@ -83,22 +83,6 @@
   --dash: 55px;
   --fill-col: var(--secondary-700);
   --stroke-col: var(--secondary-700);
-}
-
-@keyframes draw-outline {
-  0% {
-    stroke-dashoffset: var(--dash);
-    fill-opacity: 0%;
-  }
-
-  50% {
-    stroke-dashoffset: 0px;
-  }
-
-  100% {
-    stroke-dashoffset: 0px;
-    fill-opacity: 100%;
-  }
 }
 
 /* isBought state */
