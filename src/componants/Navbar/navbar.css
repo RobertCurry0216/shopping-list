@@ -1,8 +1,11 @@
 .navbar {
   --min-nav-height: 60px;
+  --nav-bg: var(--primary-500);
+  --nav-text-col: var(--text-col);
+  --nav-highlight-col: var(--secondary-300);
 
   width: 100%;
-  background-color: var(--secondary-500);
+  background-color: var(--nav-bg);
 }
 
 .navbar__container {
@@ -12,22 +15,28 @@
   align-items: center;
 }
 
-.navbar__title {
-}
-
 .navbar__items {
   display: flex;
   gap: 1rem;
   font-weight: bold;
 }
 
-.navbar__items a,
-.navbar__items a:visited,
-.navbar__items a:active {
-  color: var(--grey-700);
+.navbar__item {
+  color: var(--nav-text-col);
+  transition: transform 100ms;
+}
+
+.navbar__item:hover {
+  transform: translateY(-3px);
+}
+
+.navbar a,
+.navbar a:visited,
+.navbar a:active {
+  color: var(--nav-text-col);
   text-decoration: none;
 }
 
-.navbar__items a:hover {
-  color: var(--primary-700);
+.navbar a:hover {
+  color: var(--nav-highlight-col);
 }

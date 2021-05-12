@@ -1,0 +1,134 @@
+.sl-item {
+  --border-col: var(--primary);
+  --bg: var(--primary-100);
+  --m-h: 4rem;
+  --list-font: var(--main-font);
+
+  width: 100%;
+  min-height: var(--m-h);
+  background-color: var(--bg);
+  border: 2px solid var(--border-col);
+  border-radius: 0.5rem;
+
+  position: relative;
+  display: grid;
+  grid-template-columns: 10% auto 10%;
+  align-items: center;
+
+  padding: 0 1.5rem;
+
+  transition: transform 100ms ease-in-out, background-color 200ms ease,
+    border-color 200ms ease;
+}
+
+.sl-item:hover {
+  transform: scale(1.01);
+}
+
+.sl-item__title {
+  margin: 0;
+  margin-left: 1rem;
+  font-family: var(--list-font);
+  text-transform: capitalize;
+}
+
+.sl-item__quantity {
+  font-family: var(--list-font);
+}
+
+.sl-item strong {
+  font-size: larger;
+}
+
+/* check button */
+.sl-item__check {
+  --size: calc(var(--m-h) * 0.6);
+  --border-col: var(--primary-400);
+  --bg: var(--primary-100);
+
+  margin: 0;
+  width: var(--size);
+  height: var(--size);
+  position: relative;
+
+  background-color: var(--bg);
+  border: 2px solid var(--border-col);
+  border-radius: 0.5rem;
+}
+
+.sl-item__icon {
+  --size: 5rem;
+  --dash: 100px;
+  --fill-col: var(--primary);
+  --stroke-col: var(--primary);
+
+  width: var(--size);
+  height: var(--size);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: var(--secondary-700);
+  stroke-width: 0.5px;
+  fill: var(--secondary-700);
+  fill-opacity: 0%;
+  stroke-dasharray: var(--dash);
+  stroke-dashoffset: var(--dash);
+
+  animation: draw-outline 500ms linear forwards;
+}
+
+.sl-item__icon--check {
+  --dash: 55px;
+  --fill-col: var(--secondary-700);
+  --stroke-col: var(--secondary-700);
+}
+
+@keyframes draw-outline {
+  0% {
+    stroke-dashoffset: var(--dash);
+    fill-opacity: 0%;
+  }
+
+  50% {
+    stroke-dashoffset: 0px;
+  }
+
+  100% {
+    stroke-dashoffset: 0px;
+    fill-opacity: 100%;
+  }
+}
+
+/* isBought state */
+
+.sl-item.bought {
+  --border-col: var(--grey-300);
+  --bg: var(--grey-100);
+  color: var(--grey-300);
+}
+
+.sl-item::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: var(--grey-700);
+  top: 50%;
+  left: 1rem;
+
+  transition: width 200ms;
+}
+
+.sl-item.bought::after {
+  width: 80%;
+}
+
+.sl-item.bought .sl-item__title,
+.sl-item.bought .sl-item__quantity,
+.sl-item.bought .sl-item__check {
+  --border-col: var(--grey-300);
+  --bg: var(--grey-100);
+  color: var(--grey-300);
+}

@@ -1,0 +1,27 @@
+import { Story, Meta } from "@storybook/react";
+
+import { ShoppingListItem, ShoppingListItemProps } from "./ShoppingListItem";
+
+export default {
+  title: "UI Componants/ShoppingListItem",
+  component: ShoppingListItem,
+  argTypes: {},
+} as Meta;
+
+const Template: Story<ShoppingListItemProps> = (args) => (
+  <ShoppingListItem {...args} />
+);
+
+export const Primary = Template.bind({});
+Primary.args = {
+  title: "bread",
+  quantity: 2,
+};
+
+export const Bought = Template.bind({});
+Bought.args = {
+  title: "milk",
+  quantity: 2,
+  unit: "ml",
+  isBought: true,
+};

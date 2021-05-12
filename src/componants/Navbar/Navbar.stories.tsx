@@ -13,7 +13,7 @@ const Template: Story<NavbarProps> = (args) => <Navbar {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  title: "Primary",
+  title: <a href="#">Primary</a>,
   children: [
     <a href="#">Home</a>,
     <a href="#">About</a>,
@@ -22,6 +22,18 @@ Primary.args = {
 };
 
 export const Empty = Template.bind({});
-Empty.args = {
-  title: "Empty",
+Empty.args = {};
+
+export const TitleOnly = Template.bind({});
+TitleOnly.args = {
+  title: "Title",
+};
+
+export const LinksOnly = Template.bind({});
+LinksOnly.args = {
+  children: [
+    <a href="#">Home</a>,
+    <a href="#">About</a>,
+    <a href="#">Log in</a>,
+  ],
 };
