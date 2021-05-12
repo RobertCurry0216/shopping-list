@@ -1,0 +1,41 @@
+.icon-button {
+  --bg: var(--primary);
+  --col: var(--white);
+  --size: 3rem;
+  --icon-size: 2rem;
+
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  border: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--bg);
+  color: var(--col);
+}
+
+.icon-button > * {
+  width: var(--icon-size);
+  height: var(--icon-size);
+}
+
+.icon-button:hover {
+  transform: scale(1.1);
+}
+
+.icon-button:active {
+  --bg: var(--secondary);
+  transform: scale(0.95);
+}
+
+.icon-button,
+.icon-button:active,
+.icon-button:focus,
+.icon-button:hover {
+  outline: none;
+}

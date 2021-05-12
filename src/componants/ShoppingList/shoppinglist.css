@@ -1,0 +1,31 @@
+.shopping-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 100%;
+  min-height: 100%;
+  width: 100%;
+}
+
+.shopping-list > :not(:first-child) {
+  margin-top: 5px;
+}
+
+/* scrollbars */
+.shopping-list::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.shopping-list::-webkit-scrollbar-thumb {
+  background: var(--primary-400);
+  border-radius: 5px;
+}
+.shopping-list::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+.shopping-list::-webkit-scrollbar-track {
+  background: var(--grey-200);
+  border-radius: 5px;
+}

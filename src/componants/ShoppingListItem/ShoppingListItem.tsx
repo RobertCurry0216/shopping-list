@@ -10,8 +10,8 @@ const unitTypes = ["x", "g", "mg", "kg", "ml", "l"] as const;
 export type ShoppingListItemProps = {
   title: string;
   quantity: number;
-  unit: typeof unitTypes[number];
-  isBought: boolean;
+  unit?: typeof unitTypes[number];
+  isBought?: boolean;
 };
 
 export function ShoppingListItem({

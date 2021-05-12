@@ -12,7 +12,7 @@
 
   position: relative;
   display: grid;
-  grid-template-columns: 10% auto 10%;
+  grid-template-columns: 20% auto 10%;
   align-items: center;
 
   padding: 0 1.5rem;
@@ -38,6 +38,7 @@
 
 .sl-item strong {
   font-size: larger;
+  margin-right: 0.3rem;
 }
 
 /* check button */
@@ -115,4 +116,12 @@
   --border-col: var(--grey-300);
   --bg: var(--grey-100);
   color: var(--grey-300);
+}
+
+/* media Query - large screen */
+
+@media screen and (min-width: 768px) {
+  .sl-item {
+    grid-template-columns: 10% auto 10%;
+  }
 }
