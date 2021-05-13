@@ -4,7 +4,7 @@ import { UserContext } from "../../auth/UserProvider";
 export function useLogin() {
   const { setUsername, setListId } = useContext(UserContext);
 
-  function login(username: string, id: number) {
+  function login(username: string, id: string) {
     setUsername(username);
     setListId(id);
   }

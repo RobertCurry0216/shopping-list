@@ -24,7 +24,7 @@ function App() {
       </Navbar>
       <div className="container">
         <Switch>
-          <LoggedInRoute path="/" exact component={HomePage} />
+          <LoggedInRoute path="/list/:id" exact component={HomePage} />
           <Route path="/about" exact component={AboutPage} />
           <Route path="/login" exact component={LoginPage} />
         </Switch>

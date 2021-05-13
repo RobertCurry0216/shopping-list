@@ -5,9 +5,9 @@ import "./LoginForm.css";
 
 export type LoginFormProps = {
   username?: string;
-  listId?: number | null;
+  listId?: string | null;
   createNewList?: boolean;
-  onClick: (username: string, id: number) => void;
+  onClick: (username: string, id: string | null) => void;
 };
 
 export function LoginForm({
@@ -24,7 +24,7 @@ export function LoginForm({
 
   function onSubmitHandler(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    onClick(usernameInput, listIdInput || -1);
+    onClick(usernameInput, listIdInput);
   }
 
   return (
@@ -62,7 +62,7 @@ export function LoginForm({
         className="login-form__input"
         id="list-id"
         placeholder="1234"
-        onChange={(e) => setListIdInput(Number(e.target.value))}
+        onChange={(e) => setListIdInput(e.target.value)}
         disabled={createNewListInput}
       />
       <button
