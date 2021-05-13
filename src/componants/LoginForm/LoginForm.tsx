@@ -4,9 +4,9 @@ import React from "react";
 import "./LoginForm.css";
 
 export type LoginFormProps = {
-  username: string;
-  listId: number | null;
-  createNewList: boolean;
+  username?: string;
+  listId?: number | null;
+  createNewList?: boolean;
   onClick: (username: string, id: number) => void;
 };
 

@@ -118,6 +118,12 @@ h6 {
   width: 1px;
 }
 
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* animations */
 
 @keyframes draw-outline {

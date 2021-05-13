@@ -5,22 +5,28 @@ import "./styles/main.css";
 import { Route, Switch, NavLink } from "react-router-dom";
 
 //pages
-import { HomePage, AboutPage } from "./pages";
+import { HomePage, AboutPage, LoginPage } from "./pages";
 
 //componants
 import { Navbar } from "./componants/Navbar";
+import { LoggedInRoute } from "./utils/CustomRoutes";
 
 function App() {
   return (
     <div>
       <Navbar title="Shopping List">
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/about">About</NavLink>
+        <NavLink to="/" activeClassName="active-link">
+          Home
+        </NavLink>
+        <NavLink to="/about" activeClassName="active-link">
+          About
+        </NavLink>
       </Navbar>
       <div className="container">
         <Switch>
-          <Route path="/" exact component={HomePage} />
+          <LoggedInRoute path="/" exact component={HomePage} />
           <Route path="/about" exact component={AboutPage} />
+          <Route path="/login" exact component={LoginPage} />
         </Switch>
       </div>
     </div>
