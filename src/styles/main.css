@@ -1,9 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Slab:wght@100;300;700&display=swap");
 
+/* 
+  breakpoints 
+  small: 320px;
+  medium: 768px;
+  large: 1024px; 
+  */
+
 :root {
   /* colors */
   --black: hsl(0, 0%, 0%);
   --white: hsl(0, 0%, 100%);
+  --success: hsl(88, 38%, 45%);
+  --warning: hsl(9, 71%, 49%);
 
   --grey-100: hsl(0, 0%, 90%);
   --grey-200: hsl(0, 0%, 80%);
@@ -15,16 +24,16 @@
   --grey-800: hsl(0, 0%, 20%);
   --grey-900: hsl(0, 0%, 10%);
 
-  --secondary-100: hsl(88, 38%, 95%);
-  --secondary-200: hsl(88, 38%, 85%);
-  --secondary-300: hsl(88, 38%, 75%);
-  --secondary-400: hsl(88, 38%, 65%);
-  --secondary-500: hsl(88, 38%, 55%);
-  --secondary-600: hsl(88, 38%, 45%);
-  --secondary-700: hsl(88, 38%, 35%);
-  --secondary-800: hsl(88, 38%, 25%);
-  --secondary-900: hsl(88, 38%, 15%);
-  --secondary: var(--secondary-600);
+  --secondary-100: hsl(161, 92%, 95%);
+  --secondary-200: hsl(161, 92%, 85%);
+  --secondary-300: hsl(161, 92%, 75%);
+  --secondary-400: hsl(161, 92%, 65%);
+  --secondary-500: hsl(161, 92%, 55%);
+  --secondary-600: hsl(161, 92%, 45%);
+  --secondary-700: hsl(161, 92%, 35%);
+  --secondary-800: hsl(161, 92%, 25%);
+  --secondary-900: hsl(161, 92%, 15%);
+  --secondary: var(--secondary-900);
 
   --primary-100: hsl(28, 67%, 94%);
   --primary-200: hsl(28, 67%, 84%);
@@ -46,13 +55,11 @@
 
   --text-col: var(--grey-700);
 
-  /* breakpoints */
-  --breakpoint-small: 320px;
-  --breakpoint-medium: 768px;
-  --breakpoint-large: 1024px;
-
   /* display */
   --max-container-width: 1180px;
+
+  /* background */
+  background-color: var(--primary-100);
 }
 
 h1,

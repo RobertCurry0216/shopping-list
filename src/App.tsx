@@ -1,12 +1,28 @@
 import "./styles/reset.css";
 import "./styles/main.css";
 
-import { ShoppingListItem } from "./componants/ShoppingListItem";
+// libs
+import { Route, Switch, NavLink } from "react-router-dom";
+
+//pages
+import { HomePage, AboutPage } from "./pages";
+
+//componants
+import { Navbar } from "./componants/Navbar";
 
 function App() {
   return (
-    <div className="App">
-      <ShoppingListItem title="Bread" quantity={1} unit="x" />
+    <div>
+      <Navbar title="Shopping List">
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/about">About</NavLink>
+      </Navbar>
+      <div className="container">
+        <Switch>
+          <Route path="/" exact component={HomePage} />
+          <Route path="/about" exact component={AboutPage} />
+        </Switch>
+      </div>
     </div>
   );
 }
