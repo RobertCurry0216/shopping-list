@@ -1,13 +1,19 @@
 //styles
 import "./shoppinglist.css";
 
-import { ShoppingListItem, ShoppingListItemProps } from "../ShoppingListItem";
+// componants
+import { ShoppingListItem } from "../ShoppingListItem";
+import { useShoppingList } from "../../utils/hooks";
+import React from "react";
 
-export type ShoppingListProps = {
-  items: (ShoppingListItemProps & { id: number })[];
-};
+function ShoppingList() {
+  const {
+    state: { items },
+    dispatch,
+  } = useShoppingList();
 
-function ShoppingList({ items }: ShoppingListProps) {
+  React.useEffect(() => dispatch({ type: "fetch list" }), [dispatch]);
+
   return (
     <section className={"shopping-list"}>
       {items.map((item) => (

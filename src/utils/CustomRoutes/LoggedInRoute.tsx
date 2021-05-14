@@ -1,10 +1,10 @@
 import { ComponentType } from "react";
 import { Redirect, Route } from "react-router";
-import { useUser } from "../hooks/useUser";
+import { useUser } from "../hooks";
 
 export type LoggedInRouteProps = {
   path: string;
-  exact: boolean;
+  exact?: boolean;
   component: ComponentType<any>;
 };
 

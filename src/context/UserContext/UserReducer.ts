@@ -1,10 +1,12 @@
+import React from "react";
+
 export interface IUser {
   username: string | null;
   listId: string | null;
   status: "logged in" | "logged out" | "pending";
 }
 
-export type actionType =
+type actionType =
   | {
       type: "log in";
       payload: { username: string; listId: string };
@@ -12,6 +14,8 @@ export type actionType =
   | {
       type: "log out";
     };
+
+export type userDispatch = React.Dispatch<actionType>;
 
 export function UserReducer(user: IUser, action: actionType) {
   switch (action.type) {

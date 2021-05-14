@@ -4,7 +4,7 @@ import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 
 // user context
-import { UserProvider } from "./context/UserProvider";
+import { UserProvider } from "./context";
 
 ReactDOM.render(
   <React.StrictMode>

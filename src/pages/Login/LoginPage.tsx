@@ -4,7 +4,6 @@ import "./LoginPage.css";
 import { LoginForm } from "../../componants/LoginForm";
 import { useLogin } from "../../utils/hooks/useLogin";
 import { nanoid } from "nanoid";
-import { useHistory } from "react-router";
 
 export function LoginPage() {
   const login = useLogin();

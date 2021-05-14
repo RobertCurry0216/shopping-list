@@ -1,5 +1,5 @@
 import { useHistory } from "react-router-dom";
-import { useUser } from "./useUser";
+import { useUser } from "./";
 
 export function useLogout() {
   const { dispatch } = useUser();

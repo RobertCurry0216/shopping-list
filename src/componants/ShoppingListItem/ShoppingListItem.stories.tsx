@@ -14,12 +14,14 @@ const Template: Story<ShoppingListItemProps> = (args) => (
 
 export const Primary = Template.bind({});
 Primary.args = {
+  id: 1,
   title: "bread",
   quantity: 2,
 };
 
 export const Bought = Template.bind({});
 Bought.args = {
+  id: 1,
   title: "bread",
   quantity: 2,
   isBought: true,

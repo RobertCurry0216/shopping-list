@@ -8,6 +8,7 @@ import { MdCheck } from "react-icons/md";
 const unitTypes = ["x", "g", "mg", "kg", "ml", "l"] as const;
 
 export type ShoppingListItemProps = {
+  id: number;
   title: string;
   quantity: number;
   unit?: typeof unitTypes[number];
