@@ -1,14 +1,14 @@
 import { useHistory } from "react-router-dom";
 import { useUser } from "./useUser";
 
-export function useLogin() {
+export function useLogout() {
   const { dispatch } = useUser();
   const history = useHistory();
 
-  function login(username: string, listId: string) {
-    dispatch({ type: "log in", payload: { username, listId } });
+  function logout(username: string, listId: string) {
+    dispatch({ type: "log out" });
     history.push("/");
   }
 
-  return login;
+  return logout;
 }

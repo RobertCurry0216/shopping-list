@@ -13,7 +13,7 @@ export type LoginFormProps = {
 export function LoginForm({
   username = "",
   listId = null,
-  createNewList = false,
+  createNewList = true,
   onClick,
 }: LoginFormProps) {
   const [usernameInput, setUsernameInput] = React.useState(username);
@@ -39,6 +39,7 @@ export function LoginForm({
         id="username"
         placeholder="your name"
         onChange={(e) => setUsernameInput(e.target.value)}
+        required
       />
 
       <div className="login-form__full-row">
@@ -61,9 +62,12 @@ export function LoginForm({
         type="text"
         className="login-form__input"
         id="list-id"
-        placeholder="1234"
+        placeholder="12345"
         onChange={(e) => setListIdInput(e.target.value)}
         disabled={createNewListInput}
+        minLength={5}
+        maxLength={5}
+        required={!createNewList}
       />
       <button
         className="login-form__submit-button login-form__full-row"

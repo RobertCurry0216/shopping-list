@@ -2,7 +2,7 @@ import "./styles/reset.css";
 import "./styles/main.css";
 
 // libs
-import { Route, Switch, NavLink } from "react-router-dom";
+import { Route, Switch, NavLink, Redirect } from "react-router-dom";
 
 //pages
 import { HomePage, AboutPage, LoginPage } from "./pages";
@@ -24,9 +24,10 @@ function App() {
       </Navbar>
       <div className="container">
         <Switch>
-          <LoggedInRoute path="/list/:id" exact component={HomePage} />
+          <LoggedInRoute path="/" exact component={HomePage} />
           <Route path="/about" exact component={AboutPage} />
           <Route path="/login" exact component={LoginPage} />
+          <Redirect to="/login" />
         </Switch>
       </div>
     </div>

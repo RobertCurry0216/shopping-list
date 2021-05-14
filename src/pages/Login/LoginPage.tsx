@@ -8,12 +8,10 @@ import { useHistory } from "react-router";
 
 export function LoginPage() {
   const login = useLogin();
-  const history = useHistory();
 
   function loginHandler(username: string, id: string | null) {
     const listid = id || nanoid(5);
     login(username, listid);
-    history.push(`/list/${listid}`);
   }
 
   return (

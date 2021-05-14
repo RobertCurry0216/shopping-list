@@ -82,8 +82,8 @@
 
 .sl-item__icon--check {
   --dash: 55px;
-  --fill-col: var(--secondary-700);
-  --stroke-col: var(--secondary-700);
+  --fill-col: var(--success);
+  --stroke-col: var(--success);
 }
 
 /* isBought state */

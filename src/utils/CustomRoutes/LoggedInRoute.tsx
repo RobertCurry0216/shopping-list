@@ -9,6 +9,12 @@ export type LoggedInRouteProps = {
 };
 
 export function LoggedInRoute(props: LoggedInRouteProps) {
-  const { username } = useUser();
-  return username ? <Route {...props} /> : <Redirect to="/login" />;
+  const {
+    state: { status },
+  } = useUser();
+  return status === "logged in" ? (
+    <Route {...props} />
+  ) : (
+    <Redirect to="/login" />
+  );
 }
